@@ -256,38 +256,48 @@ Let's continue with our football betting app! This time, we have a map with a lo
 
 GOOD LUCK 😀
 */
+//
+// const gameEvents = new Map([
+//   [17, '⚽️ GOAL'],
+//   [36, '🔁 Substitution'],
+//   [47, '⚽️ GOAL'],
+//   [61, '🔁 Substitution'],
+//   [64, '🔶 Yellow card'],
+//   [69, '🔴 Red card'],
+//   [70, '🔁 Substitution'],
+//   [72, '🔁 Substitution'],
+//   [76, '⚽️ GOAL'],
+//   [80, '⚽️ GOAL'],
+//   [92, '🔶 Yellow card']
+// ]);
+//
+// //1
+// const set = new Set(gameEvents.values());
+// console.log(set);
+// const events = [...set];
+// console.log(events);
+//
+// //2
+// gameEvents.delete(64);
+// console.log(gameEvents);
+//
+// //3
+// const time = [...gameEvents.keys()].pop();
+// console.log(time);
+// console.log(`An event happened, on average, every ${time / gameEvents.size} minutes`);
+//
+// //4
+// for (const [key,value] of gameEvents) {
+//   const str = key <= 45 ? '[FIRST HALF]' : '[SECOND HALF]';
+//   console.log(`${str} ${key} : ${value}`);
+// }
 
-const gameEvents = new Map([
-  [17, '⚽️ GOAL'],
-  [36, '🔁 Substitution'],
-  [47, '⚽️ GOAL'],
-  [61, '🔁 Substitution'],
-  [64, '🔶 Yellow card'],
-  [69, '🔴 Red card'],
-  [70, '🔁 Substitution'],
-  [72, '🔁 Substitution'],
-  [76, '⚽️ GOAL'],
-  [80, '⚽️ GOAL'],
-  [92, '🔶 Yellow card']
-]);
 
-//1
-const set = new Set(gameEvents.values());
-console.log(set);
-const events = [...set];
-console.log(events);
+//STRING METHODS - mask
+const str = 'ziemniaczek prosiaczek';
+console.log(str.length);
 
-//2
-gameEvents.delete(64);
-console.log(gameEvents);
+const last = str.slice(-10);
+console.log(last, last.length);
 
-//3
-const time = [...gameEvents.keys()].pop();
-console.log(time);
-console.log(`An event happened, on average, every ${time / gameEvents.size} minutes`);
-
-//4
-for (const [key,value] of gameEvents) {
-  const str = key <= 45 ? '[FIRST HALF]' : '[SECOND HALF]';
-  console.log(`${str} ${key} : ${value}`);
-}
+console.log(last.padStart(str.length, '*'));
